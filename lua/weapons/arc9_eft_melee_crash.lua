@@ -107,16 +107,16 @@ SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
 
 
+SWEP.TPIKforcelefthand = true
+SWEP.TPIKParentToSpine4 = true  
+
 SWEP.WorldModelOffset = {
     Pos = Vector(-10, 5, -14),
     Ang = Angle(20, -10, 195),
-    -- TPIKPos = Vector(-8, 15, -17), -- knife
-    -- TPIKPos = Vector(-6, 8, -14), -- slam
-    TPIKPos = Vector(-18, 16, -14), -- duel
-    TPIKAng = Angle(-11.5, 0, 180),
+    TPIKPos = Vector(17, 1, 1),
+    TPIKAng = Angle(0, 90, 90),
     Scale = 1
 }
-
 
 -------------------------- HoldTypes
 
