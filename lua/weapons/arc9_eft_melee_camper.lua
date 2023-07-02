@@ -2,9 +2,9 @@ AddCSLuaFile()
 
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
+SWEP.NotForNPCs = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
-SWEP.SubCategory = "_Not for your eyessss"
 SWEP.Credits = { 
     [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
     [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
@@ -12,7 +12,7 @@ SWEP.Credits = {
     [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
 }
 
-SWEP.PrintName = "Camper axe"
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_camper") or "Camper axe"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
 SWEP.Trivia = {}
 
