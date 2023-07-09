@@ -81,9 +81,8 @@ SWEP.Bash2DamageHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or
 
 local path = "weapons/darsu_eft/melee/"
 
-SWEP.MeleeHitSound = false
-SWEP.MeleeHitWallSound = false
-SWEP.MeleeSwingSound = path .. "knife_bayonet_swing1.ogg"
+SWEP.MeleeHitSound = {path .. "body1.ogg", path .. "body2.ogg", path .. "body3.ogg", path .. "body4.ogg", path .. "body5.ogg", path .. "body6.ogg"}
+SWEP.MeleeHitWallSound = {path .. "knife_bayonet_hit1.ogg", path .. "knife_bayonet_hit2.ogg"}SWEP.MeleeSwingSound = path .. "knife_bayonet_swing1.ogg"
 
 -------------------------- POSITIONS
 
