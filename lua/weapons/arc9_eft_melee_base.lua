@@ -88,10 +88,12 @@ SWEP.Bash2Range = 0.5 / 0.0254 * 2
 SWEP.PreBash2Time = 0.45
 SWEP.PostBash2Time = 0.5
 
-local multmelee = GetConVar("arc9_eft_mult_melee")
-SWEP.DamageMaxHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
-SWEP.BashDamageHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
-SWEP.Bash2DamageHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
+if ARC9EFTBASE then -- no multipliers for non shared users! lololol
+    local multmelee = GetConVar("arc9_eft_mult_melee")
+    SWEP.DamageMaxHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
+    SWEP.BashDamageHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
+    SWEP.Bash2DamageHook = function(swep, dmg) return dmg * (multmelee:GetFloat() or 1) end
+end
 
 local path = "weapons/darsu_eft/melee/"
 
