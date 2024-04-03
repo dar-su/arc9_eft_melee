@@ -183,3 +183,4 @@ SWEP.Animations = {
 }
 
 SWEP.AttachmentElements = {}
+SWEP.CantSafety = true
