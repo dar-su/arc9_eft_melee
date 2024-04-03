@@ -91,11 +91,13 @@ hook.Add("Think", "arc9eftjammer", function()
         fuckthis = CurTime() + 1.5
 
         local funnycheck = false
-
+        
         if enabletaranjam:GetBool() then
-            for _, ply in player.Iterator() do
+            -- for i, v in (player.Iterator and player.Iterator() or ipairs(player.GetAll())) do
+            for _, ply in ipairs(player.GetAll()) do
                 if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon():GetClass() == "arc9_eft_melee_taran" then
                     funnycheck = true
+                    break
                 end
             end
         end
