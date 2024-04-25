@@ -80,7 +80,8 @@ SWEP.Animations = {
 -- in original this works only on boss - boss gives nearby players panic buff and their guns jam
 
 
-local enabletaranjam = ARC9EFTBASE and GetConVar("arc9_eft_taran_jam") or CreateConVar("arc9_eft_taran_jam", "1", {FCVAR_ARCHIVE, FCVAR_REPLICATED}, "for melee pack - if ANY player draws PR-Taran, this will make all guns forcefully jammed (Sets arc9 jam chance modifier to 9999, sets to prev value when no holding taran).", 0, 1)
+-- local enabletaranjam = ARC9EFTBASE and GetConVar("arc9_eft_taran_jam") or CreateConVar("arc9_eft_taran_jam", "1", {FCVAR_ARCHIVE, FCVAR_REPLICATED}, "for melee pack - if ANY player draws PR-Taran, this will make all guns forcefully jammed (Sets arc9 jam chance modifier to 9999, sets to prev value when no holding taran).", 0, 1)
+local enabletaranjam = GetConVar("arc9_eft_taran_jam") or CreateConVar("arc9_eft_taran_jam", "1", {FCVAR_ARCHIVE, FCVAR_REPLICATED}, "for melee pack - if ANY player draws PR-Taran, this will make all guns forcefully jammed (Sets arc9 jam chance modifier to 9999, sets to prev value when no holding taran).", 0, 1)
 
 local non9999cvarvalue = 1
 local malfconvar = GetConVar("arc9_mod_malfunction")
