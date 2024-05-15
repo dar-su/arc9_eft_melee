@@ -16,6 +16,17 @@ SWEP.Trivia = {}
 
 SWEP.Description = [[The so-called "Item 6Kh5" is a bayonet knife adopted in 1989 as a standard-issue for use with AK-74 assault rifles.]]
 
+SWEP.Attachments = {
+    {
+        PrintName = "Custom slot",
+        Category = {"eft_custom_slot_melee"},
+        Bone = "bone_mele",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        -- CosmeticOnly = true,
+    },
+}
+
 SWEP.BarrelLength = 2
 SWEP.Slot = 0
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_6x5.mdl"
