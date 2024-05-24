@@ -66,8 +66,8 @@ SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
 
 local path = "weapons/darsu_eft/melee/"
 
-SWEP.MeleeHitSound = {path .. "body1.ogg", path .. "body2.ogg", path .. "body3.ogg", path .. "body4.ogg", path .. "body5.ogg", path .. "body6.ogg"}
-SWEP.MeleeHitWallSound = {path .. "knife_bayonet_hit1.ogg", path .. "knife_bayonet_hit2.ogg"}
+SWEP.MeleeHitSound = {path .. "hammer_hit_body1.ogg", path .. "hammer_hit_body2.ogg"}
+SWEP.MeleeHitWallSound = {path .. "hammer_hit_wall1.ogg", path .. "hammer_hit_wall2.ogg"}
 SWEP.MeleeSwingSound = false
 SWEP.Hook_BashHit = function(self, data)
     local dmg = data.dmg
@@ -85,7 +85,8 @@ SWEP.Hook_BashHit = function(self, data)
     end
 end
 
-local swing = {path .. "scythe_whoosh_01.ogg", path .. "scythe_whoosh_02.ogg", path .. "scythe_whoosh_03.ogg", path .. "scythe_whoosh_04.ogg", path .. "scythe_whoosh_05.ogg"}
+local swing = {path .. "hammer_swing1.ogg", path .. "hammer_swing2.ogg", path .. "hammer_swing3.ogg"}
+local charge = {path .. "hammer_charge1.ogg", path .. "hammer_charge2.ogg", path .. "hammer_charge3.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -95,14 +96,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = {"draw"},
         EventTable = {
-            { s = "weapons/darsu_eft/melee/knife_bayonet_equip.ogg", t = 0.25 },
+            { s = charge, t = 0.25 },
         }
     },
 
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            { s = "weapons/darsu_eft/melee/knife_bayonet_holster.ogg", t = 0.25 },
+            { s = charge, t = 0.25 },
         }
     },
 
@@ -113,12 +114,14 @@ SWEP.Animations = {
     ["bash"] = {
         Source = "fire1",
         EventTable = {
+            { s = charge, t = 0 },
             { s = swing, t = 9/30 },
         }
     },
     ["bash2"] = {
         Source = "fire2",
         EventTable = {
+            { s = charge, t = 0.1 },
             { s = swing, t = 25/30 },
         }
     },
