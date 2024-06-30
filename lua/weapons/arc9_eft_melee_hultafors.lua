@@ -7,14 +7,25 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "Superfors Hammer" -- Superfors DB 2020 Dead Blow Hammer
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
 SWEP.Description = [[Superfors DB 2020 Dead Blow Hammer
-The hammer is coated with urethane which provides a "thud" using steel balls to cushion the impact and reduce the vibration recoil to the handle.]]
+The hammer is coated with urethane which provides a "thud" using steel balls to cushion the impact and reduce the vibration recoil to the handle.
+
+Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animations by Fnuxray!]]
+
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+    ["Custom Animations" .. "0"] = "Fnuxray", 
+}
+
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_hultafors.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_hultafors.mdl"
 
 SWEP.ViewModelFOVBase = 70
 
-SWEP.ActivePos = Vector(2.7, -1, 0.1)
+SWEP.ActivePos = Vector(1.0, 2, 0.5)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 -- SWEP.WorldModelOffset = {
@@ -50,14 +61,14 @@ SWEP.DamageMax = 125 / 2
 SWEP.BashDamage = 103 / 2
 SWEP.BashLungeRange = 0
 SWEP.BashRange = 0.8 / 0.0254 * 2
-SWEP.PreBashTime = 0.43
-SWEP.PostBashTime = 0.6
+SWEP.PreBashTime = 0.55
+SWEP.PostBashTime = 0.9
 
 SWEP.Bash2Damage = 125 / 2
 SWEP.Bash2LungeRange = 0
 SWEP.Bash2Range = 1 / 0.0254 * 2
-SWEP.PreBash2Time = 1.1
-SWEP.PostBash2Time = 0.85
+SWEP.PreBash2Time = 0.82
+SWEP.PostBash2Time = 1.15
 
 SWEP.CustomizeAng = Angle(87, -25, -94.3)
 SWEP.CustomizePos = Vector(-12, 44, 16)
@@ -97,18 +108,27 @@ SWEP.Animations = {
         Source = {"draw"},
         EventTable = {
             { s = charge, t = 0.25 },
+            { s = "weapons/darsu_eft/melee/hammer_charge3.ogg", t = 24/24 },
+            { s = "arc9_eft_shared/weap_handon.ogg", t = 34/24, v = 0.25 },
         }
     },
 
     ["holster"] = {
         Source = "holster",
+        MinProgress = 0.8,
         EventTable = {
-            { s = charge, t = 0.25 },
+            { s = "arc9_eft_shared/weap_handoff.ogg", t = 0, v = 0.5 },
+            { s = charge, t = 0.3 },
         }
     },
 
     ["inspect"] = {
-        Source = "inspect"
+        Source = "inspect",
+        EventTable = {
+            { s = "weapons/darsu_eft/melee/hammer_charge1.ogg", t = 2/24, v = 0.25 },
+            { s = "arc9_eft_shared/weapon_generic_spin5.ogg", t = 34/30 },
+            { s = "arc9_eft_shared/weapon_generic_spin6.ogg", t = 80/30 },
+        }
     },
     
     ["bash"] = {
@@ -116,20 +136,40 @@ SWEP.Animations = {
         EventTable = {
             { s = charge, t = 0 },
             { s = swing, t = 9/30 },
+            { s = "weapons/darsu_eft/melee/hammer_charge2.ogg", t = 40/30, v = 0.25 },
+        }
+    },
+    ["bash_combo"] = {
+        Source = "fire1_combo",
+        EventTable = {
+            { s = charge, t = 0 },
+            { s = swing, t = 17/24-0.3 },
+            { s = "arc9_eft_shared/weapon_generic_spin5.ogg", t = 37/24-0.5, v = 0.5 },
         }
     },
     ["bash2"] = {
         Source = "fire2",
         EventTable = {
             { s = charge, t = 0.1 },
-            { s = swing, t = 25/30 },
+            { s = swing, t = 17/30 },
+            { s = "weapons/darsu_eft/melee/hammer_charge2.ogg", t = 40/30, v = 0.33 },
         }
     },
-
-    -- ["impact"] = {
-    --     Source = "fire1_hit"
-    -- },
-    -- ["impact2"] = {
-    --     Source = "fire2_hit"
-    -- },
 }
+
+SWEP.Hook_Bash = function(self)
+    if self:GetNextPrimaryFire() - CurTime() < 1 then
+        timer.Simple(0.15, function() 
+            if IsValid(self) then
+                local owner = self:GetOwner()
+                if IsValid(owner) then
+                    if owner:KeyDown(IN_ATTACK) then
+                        self:MeleeAttack(true)
+                        self:PlayAnimation("bash_combo", 1 / self:GetProcessedValue("BashSpeed"), false)
+                        self:SetNextPrimaryFire(CurTime() + 2)
+                    end
+                end
+            end
+        end)
+    end
+end
