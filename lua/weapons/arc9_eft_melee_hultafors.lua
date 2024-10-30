@@ -84,14 +84,17 @@ SWEP.Hook_BashHit = function(self, data)
     local dmg = data.dmg
     local ent = data.tr.Entity
     if IsValid(ent) and ent:IsPlayer() then
-        net.Start("arc9eftexplosion")
-        net.WriteFloat(1)
-        net.WriteUInt(20, 9)
-        net.WriteBool(false)
-        net.WriteEntity(self)
-        net.WriteBool(false)
-        net.Send(ent)
-
+        if EFTMED then
+            EFTMED.EffectGive(ent, "EFTMEDConcussion", "EFTMEDHPhead", 20)
+        else
+            net.Start("arc9eftexplosion")
+            net.WriteFloat(1)
+            net.WriteUInt(20, 9)
+            net.WriteBool(false)
+            net.WriteEntity(self)
+            net.WriteBool(false)
+            net.Send(ent)
+        end
         ent:ViewPunch(Angle(1.5, 0, -7.5) * 1)
     end
 end
