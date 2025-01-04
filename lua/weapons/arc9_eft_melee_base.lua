@@ -63,6 +63,11 @@ SWEP.SecondarySupplyLimit = 0
 
 SWEP.Firemodes = { {  Mode = 1, PrintName = "Melee" } }
 
+SWEP.CamQCA = 1
+SWEP.CamOffsetAng = Angle(0, 0, 90)
+SWEP.CamQCA_Mult = 0.5
+SWEP.CamQCA_Mult_ADS = 0.05
+
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 0
@@ -133,6 +138,8 @@ SWEP.CustomizePos = Vector(-8, 20, 15)
 SWEP.CustomizeSnapshotFOV = 65
 SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
 
+SWEP.HolsterPos = Vector(0, 0, 0)
+SWEP.HolsterAng = Angle(0, 0, 0)
 
 SWEP.TPIKforcelefthand = true
 SWEP.TPIKParentToSpine4 = true  
