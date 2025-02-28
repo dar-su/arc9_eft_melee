@@ -32,20 +32,7 @@ SWEP.Slot = 0
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_6x5.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_6x5.mdl"
 
-function SWEP:DrawWorldModel() -- custom func to never draw custommodel when on ground and use regular wm
-    local owner = self:GetOwner()
-
-    if IsValid(owner) and owner:GetActiveWeapon() == self then
-        self:DrawCustomModel(true)
-        self:DoBodygroups(true)
-        self:DrawLasers(true)
-        self:DoTPIK()
-        self:DrawFlashlightsWM()
-    else
-        self:DrawModel()
-    end
-end
-
+SWEP.MirrorVMWMHeldOnly = true
 
 SWEP.ViewModelFOVBase = 65
 SWEP.MirrorVMWM = true
