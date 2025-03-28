@@ -2,24 +2,23 @@ SWEP.Base = "arc9_eft_melee_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
-SWEP.AdminOnly = false
+SWEP.AdminOnly = true -- wawa   too op
 
-SWEP.PrintName = "Superfors Hammer" -- Superfors DB 2020 Dead Blow Hammer
+SWEP.PrintName = "Chained Labrys"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[Superfors DB 2020 Dead Blow Hammer
-The hammer is coated with urethane which provides a "thud" using steel balls to cushion the impact and reduce the vibration recoil to the handle.
+SWEP.Description = [[A two-handed axe made out of a sewer hatch... With that weight, a single blow is enough to split a skull, whether the blade is sharp or not.
 
 Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animations by Fnuxray!]]
 
 SWEP.Credits = { 
     [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD",
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
     ["Custom Animations" .. "0"] = "Fnuxray", 
 }
 
-
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_hultafors.mdl"
-SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_hultafors.mdl"
+SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_labris.mdl"
+SWEP.DefaultBodygroups = "20000000000000"
 
 SWEP.ViewModelFOVBase = 70
 
@@ -54,17 +53,17 @@ SWEP.AnimMelee = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = false
 SWEP.AnimDraw = false
 
-SWEP.DamageMax = 125 / 2
+SWEP.DamageMax = 199 / 2
 
-SWEP.BashDamage = 103 / 2
+SWEP.BashDamage = 166 / 2
 SWEP.BashLungeRange = 0
-SWEP.BashRange = 0.8 / 0.0254 * 2
+SWEP.BashRange = 1.2 / 0.0254 * 2
 SWEP.PreBashTime = 0.55
 SWEP.PostBashTime = 0.9
 
-SWEP.Bash2Damage = 125 / 2
+SWEP.Bash2Damage = 199 / 2
 SWEP.Bash2LungeRange = 0
-SWEP.Bash2Range = 1 / 0.0254 * 2
+SWEP.Bash2Range = 1.3 / 0.0254 * 2
 SWEP.PreBash2Time = 0.82
 SWEP.PostBash2Time = 1.15
 
@@ -72,6 +71,7 @@ SWEP.CustomizeAng = Angle(87, -25, -94.3)
 SWEP.CustomizePos = Vector(-10, 44, 14)
 SWEP.CustomizeSnapshotFOV = 80
 SWEP.CustomizeRotateAnchor = Vector(19, -4.28, -5.23)
+
 
 local path = "weapons/darsu_eft/melee/"
 
@@ -82,22 +82,19 @@ SWEP.Hook_BashHit = function(self, data)
     local dmg = data.dmg
     local ent = data.tr.Entity
     if IsValid(ent) and ent:IsPlayer() then
-        if EFTMED then
-            EFTMED.EffectGive(ent, "EFTMEDConcussion", "EFTMEDHPhead", 20)
-        else
-            net.Start("arc9eftexplosion")
-            net.WriteFloat(1)
-            net.WriteUInt(20, 9)
-            net.WriteBool(false)
-            net.WriteEntity(self)
-            net.WriteBool(false)
-            net.Send(ent)
-        end
+        net.Start("arc9eftexplosion")
+        net.WriteFloat(1)
+        net.WriteUInt(20, 9)
+        net.WriteBool(false)
+        net.WriteEntity(self)
+        net.WriteBool(false)
+        net.Send(ent)
+
         ent:ViewPunch(Angle(1.5, 0, -7.5) * 1)
     end
 end
 
-local swing = {path .. "hammer_swing1.ogg", path .. "hammer_swing2.ogg", path .. "hammer_swing3.ogg"}
+local swing = {path .. "scythe_whoosh_01.ogg", path .. "scythe_whoosh_02.ogg", path .. "scythe_whoosh_03.ogg", path .. "scythe_whoosh_04.ogg", path .. "scythe_whoosh_05.ogg"}
 local charge = {path .. "hammer_charge1.ogg", path .. "hammer_charge2.ogg", path .. "hammer_charge3.ogg"}
 
 SWEP.Animations = {

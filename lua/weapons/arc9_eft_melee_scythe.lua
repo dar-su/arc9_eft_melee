@@ -12,9 +12,7 @@ Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animation
 
 SWEP.Credits = { 
     [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
-    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
-    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD",
     ["Custom Animations" .. "0"] = "Fnuxray", 
 }
 
