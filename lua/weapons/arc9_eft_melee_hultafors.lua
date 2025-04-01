@@ -38,8 +38,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.WorldModelOffset = {
     Pos = Vector(-16.5, 3.5, -14.5),
     Ang = Angle(0, 50, 244),
-    TPIKPos = Vector(8, -1, 7),
-    TPIKAng = Angle(-5, 70, 90),
+    TPIKPos = Vector(8, 2, 2),
+    TPIKAng = Angle(25, 50, 90),
 }
 SWEP.HoldType = "melee2"
 

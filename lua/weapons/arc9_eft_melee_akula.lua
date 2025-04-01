@@ -11,6 +11,13 @@ SWEP.Description = [[As dangerous as the fish its named after.]]
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_dagger.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_dagger.mdl"
 
+SWEP.WorldModelOffset = {
+    Pos = Vector(-9.5, 5.5, -14.5),
+    Ang = Angle(20, -10, 195),
+    TPIKPos = Vector(1, 3, 0),
+    TPIKAng = Angle(-5, 70, 90),
+}
+
 SWEP.DamageMax = 39
 
 SWEP.BashDamage = 24
