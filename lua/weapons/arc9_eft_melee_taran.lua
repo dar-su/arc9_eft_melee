@@ -83,42 +83,20 @@ SWEP.Animations = {
 -- local enabletaranjam = ARC9EFTBASE and GetConVar("arc9_eft_taran_jam") or CreateConVar("arc9_eft_taran_jam", "1", {FCVAR_ARCHIVE, FCVAR_REPLICATED}, "for melee pack - if ANY player draws PR-Taran, this will make all guns forcefully jammed (Sets arc9 jam chance modifier to 9999, sets to prev value when no holding taran).", 0, 1)
 local enabletaranjam = GetConVar("arc9_eft_taran_jam") or CreateConVar("arc9_eft_taran_jam", "1", {FCVAR_ARCHIVE, FCVAR_REPLICATED}, "for melee pack - if ANY player draws PR-Taran, this will make all guns forcefully jammed (Sets arc9 jam chance modifier to 9999, sets to prev value when no holding taran).", 0, 1)
 
-local non9999cvarvalue = 1
-local malfconvar = GetConVar("arc9_mod_malfunction")
-
 local fuckthis = 0
-hook.Add("Think", "arc9eftjammer", function()
-    if SERVER and fuckthis < CurTime() then
+hook.Add("ARC9_MalfunctionMeanShotsToFailHook", "arc9eftjammer", function(wep, data)
+    if fuckthis < CurTime() and enabletaranjam:GetBool() then
         fuckthis = CurTime() + 1.5
-
-        local funnycheck = false
         
-        if enabletaranjam:GetBool() then
-            -- for i, v in (player.Iterator and player.Iterator() or ipairs(player.GetAll())) do
-            for _, ply in ipairs(player.GetAll()) do
-                if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon():GetClass() == "arc9_eft_melee_taran" then
-                    funnycheck = true
-                    break
-                end
+        local funnycheck = false
+
+        for _, ply in player.Iterator() do
+            if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon():GetClass() == "arc9_eft_melee_taran" then
+                funnycheck = true
+                break
             end
         end
-
-        local cvarval = malfconvar:GetFloat() or 1
-
-        if cvarval != 99999 then 
-            non9999cvarvalue = cvarval 
-            if funnycheck then
-                malfconvar:SetFloat(99999)
-                -- print("settng to 999")
-            elseif cvarval != non9999cvarvalue then
-                malfconvar:SetFloat(non9999cvarvalue)
-                -- print("Reseting to2 ", non9999cvarvalue)
-            end
-        else
-            if !funnycheck then
-                malfconvar:SetFloat(non9999cvarvalue)
-                -- print("Reseting to ", non9999cvarvalue)
-            end
-        end
+        
+        if funnycheck then return data * 9999 end
     end
 end)
