@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Kiba Arms Tomahawk"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[A tactical tomahawk, multitool and breaching tool, all-in-one solution.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_tomahawk") or "Kiba Arms Tomahawk"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_tomahawk_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_kiba_axe.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_kiba_axe.mdl"

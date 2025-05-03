@@ -4,16 +4,14 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = true -- wawa   too op
 
-SWEP.PrintName = "Old hand scythe"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[An old hand scythe with a chipped handle. In the days of the fall harvest, it is used to gather the bloody haul.
-
-Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animations by Fnuxray!]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_scythe") or "Old hand scythe"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_scythe_desc"
 
 SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD",
-    ["Custom Animations" .. "0"] = "Fnuxray", 
+    ["eft_trivia_author1"] = "Darsu", 
+    ["eft_trivia_assets2"] = "Battlestate Games LTD",
+    ["eft_trivia_anim0"] = "Fnuxray", 
 }
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_hultafors.mdl"

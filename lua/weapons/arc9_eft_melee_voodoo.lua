@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "SOG Voodoo Hawk"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[SOG has combined its three best features: an extended cutting head, compact glass-reinforced nylon handle, and a metal butt cap on the end.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_voodoo") or "SOG Voodoo Hawk"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_voodoo_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_voodoo.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_voodoo.mdl"

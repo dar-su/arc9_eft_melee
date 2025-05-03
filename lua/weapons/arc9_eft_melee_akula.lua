@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Akula push dagger"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[As dangerous as the fish its named after.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_akula") or "Akula push dagger"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_akula_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_dagger.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_dagger.mdl"

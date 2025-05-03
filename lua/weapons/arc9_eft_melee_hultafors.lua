@@ -4,17 +4,14 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Superfors Hammer" -- Superfors DB 2020 Dead Blow Hammer
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[Superfors DB 2020 Dead Blow Hammer
-The hammer is coated with urethane which provides a "thud" using steel balls to cushion the impact and reduce the vibration recoil to the handle.
-
-Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animations by Fnuxray!]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_superfors") or "Superfors Hammer" -- Superfors DB 2020 Dead Blow Hammer
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_superfors_desc"
 
 SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD",
-    ["Custom Animations" .. "0"] = "Fnuxray", 
+    ["eft_trivia_author1"] = "Darsu", 
+    ["eft_trivia_assets2"] = "Battlestate Games LTD",
+    ["eft_trivia_anim0"] = "Fnuxray", 
 }
 
 

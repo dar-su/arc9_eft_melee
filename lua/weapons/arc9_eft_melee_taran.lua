@@ -4,13 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-ARC9:AddPhrase("eft_weapon_taran", "\"PR-Taran\"", "en")
-ARC9:AddPhrase("eft_weapon_taran", "\"ПР-Таран\"", "ru")
-ARC9:AddPhrase("eft_weapon_taran", "PW-Tawan :3", "uwu")
-
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_taran") or "PR-Taran baton"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[The PR-Taran baton with side handle is used by law enforcement agencies for protection and crowd control.]]
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_taran_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_taran.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_taran.mdl"

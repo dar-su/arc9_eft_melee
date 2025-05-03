@@ -5,8 +5,8 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_sp8") or "SP-8 Machete"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[SP-8 is a survival machete made of a single piece of high carbon steel. Manufactured by Ontario Knife Company.]]
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_sp8_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_sp8.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_sp8-8_lod0www.mdl" -- i forgor rename in qc

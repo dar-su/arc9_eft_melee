@@ -5,8 +5,8 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_a2607d") or "Bars A-2607 Damascus"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[The Bars A-2607 knife, forged of Damascus steel with a wenge handle and brass guard.]]
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_a2607d_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_bars_a2607.mdl"
 SWEP.DefaultSkin = 1

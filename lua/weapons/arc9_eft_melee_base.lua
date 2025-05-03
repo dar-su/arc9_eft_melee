@@ -4,15 +4,15 @@ SWEP.NotForNPCs = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD",
+    ["eft_trivia_author1"] = "Darsu", 
+    ["eft_trivia_assets2"] = "Battlestate Games LTD",
 }
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_6x5") or "6Kh5 Bayonet"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
+SWEP.Class = "eft_class_weapon_melee"
 SWEP.Trivia = {}
 
-SWEP.Description = [[The so-called "Item 6Kh5" is a bayonet knife adopted in 1989 as a standard-issue for use with AK-74 assault rifles.]]
+SWEP.Description = "eft_weapon_6x5_desc"
 
 SWEP.Attachments = {
     {

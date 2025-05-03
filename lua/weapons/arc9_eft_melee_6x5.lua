@@ -5,8 +5,8 @@ SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_6x5") or "6Kh5 Bayonet"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[The so-called "Item 6Kh5" is a bayonet knife adopted in 1989 as a standard-issue for use with AK-74 assault rifles.]]
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_6x5_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_6x5.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_6x5.mdl"

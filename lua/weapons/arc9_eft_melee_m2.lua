@@ -4,9 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Miller Bros. Blades M-2"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[Designed as a tool for working with hard surfaces. Materials and construction are designed to provide optimal impact and strength. The head of the axe is made of 6AL4V titanium with a thickness of 2.85 inches.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_millerbros") or "Miller Bros. Blades M-2"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_millerbros_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_bros_m2.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_bros_m2-2_lod0www.mdl" -- forgor rename in qc

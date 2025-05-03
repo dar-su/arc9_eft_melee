@@ -4,10 +4,9 @@ SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M48 Tactical Kukri"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee")
-SWEP.Description = [[to get this knife bsg wants you to pay 250 euro. isnt it insane?
-A 48 series tactical kukri manufactured by United Cutlery. Features a stainless steel blade and rubberized handle. A great addition to every survivalists arsenal!]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_m48") or "M48 Tactical Kukri"
+SWEP.Class = "eft_class_weapon_melee"
+SWEP.Description = "eft_weapon_m48_desc"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_kukri.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_kukri.mdl"
