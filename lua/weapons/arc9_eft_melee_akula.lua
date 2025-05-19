@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_eft_melee_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_akula") or "Akula push dagger"
-SWEP.Class = "eft_class_weapon_melee"
-SWEP.Description = "eft_weapon_akula_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_akula_desc") or "Akula push dagger"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_dagger.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_dagger.mdl"

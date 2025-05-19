@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_eft_melee_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Spawnable = true
 SWEP.AdminOnly = true -- wawa   too op
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_scythe") or "Old hand scythe"
-SWEP.Class = "eft_class_weapon_melee"
-SWEP.Description = "eft_weapon_scythe_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_scythe_desc") or "Old hand scythe"
 
 SWEP.Credits = { 
     ["eft_trivia_author1"] = "Darsu", 

@@ -1,22 +1,24 @@
+-- keep in mind melees should be usable without shared
+
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = false
 SWEP.NotForNPCs = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Credits = { 
-    ["eft_trivia_author1"] = "Darsu", 
-    ["eft_trivia_assets2"] = "Battlestate Games LTD",
+    [ARC9:GetPhrase("eft_trivia_author1") or "Author"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets2") or "Assets"] = "Battlestate Games LTD",
 }
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_6x5") or "6Kh5 Bayonet"
-SWEP.Class = "eft_class_weapon_melee"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
 SWEP.Trivia = {}
 
-SWEP.Description = "eft_weapon_6x5_desc"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_6x5_desc") or "6Kh5 Bayonet"
 
 SWEP.Attachments = {
     {
-        PrintName = "Custom slot",
+        PrintName = ARC9:GetPhrase("eft_cat_custom") or "Custom slot",
         Category = {"eft_custom_slot_melee"},
         Bone = "bone_mele",
         Pos = Vector(0, 0, -2),
@@ -46,7 +48,7 @@ SWEP.ClipSize = -1
 SWEP.SupplyLimit = 0 
 SWEP.SecondarySupplyLimit = 0
 
-SWEP.Firemodes = { {  Mode = 1, PrintName = "Melee" } }
+SWEP.Firemodes = { {  Mode = 1, PrintName = ARC9:GetPhrase("eft_fmode_melee") or "Melee" } }
 
 SWEP.CamQCA = 1
 SWEP.CamOffsetAng = Angle(0, 0, 90)

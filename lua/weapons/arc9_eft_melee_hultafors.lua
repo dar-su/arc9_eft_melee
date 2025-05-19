@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_eft_melee_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_superfors") or "Superfors Hammer" -- Superfors DB 2020 Dead Blow Hammer
-SWEP.Class = "eft_class_weapon_melee"
-SWEP.Description = "eft_weapon_superfors_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_superfors_desc") or "Superfors DB 2020 Dead Blow Hammer"
 
 SWEP.Credits = { 
     ["eft_trivia_author1"] = "Darsu", 

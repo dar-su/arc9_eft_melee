@@ -1,12 +1,12 @@
 SWEP.Base = "arc9_eft_melee_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Spawnable = true
 SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_sp8") or "SP-8 Machete"
-SWEP.Class = "eft_class_weapon_melee"
-SWEP.Description = "eft_weapon_sp8_desc"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_sp8_desc") or "SP-8 Machete"
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_sp8.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_sp8-8_lod0www.mdl" -- i forgor rename in qc
