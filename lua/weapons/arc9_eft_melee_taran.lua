@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_taran") or "PR-Taran baton"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_taran_desc") or "PR-Taran baton"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_taran_desc") or [[The PR-Taran baton with side handle is used by law enforcement agencies for protection and crowd control.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_taran.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_taran.mdl"

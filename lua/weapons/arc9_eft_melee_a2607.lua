@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_a2607") or "Bars A-2607"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_a2607_desc") or "Bars A-2607"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_a2607_desc") or [[The Bars A-2607 knife, forged of 95H18 steel with a fine wood handle and brass guard.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_bars_a2607.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_bars_a2607.mdl"

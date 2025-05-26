@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_gladius") or "APOK Gladius"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_gladius_desc") or "APOK Gladius"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_gladius_desc") or [[The Tactical Wasteland Gladius sword, manufactured by APOK. Arena champions prime melee weapon. Rumors are that this is the exact blade that the gladiator Voron used to fight with. Or at least it looks like one.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_gladius.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_gladius.mdl"

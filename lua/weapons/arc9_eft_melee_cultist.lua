@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_cultist") or "Cultist knife"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_cultist_desc") or "Cultist knife"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_cultist_desc") or [[A knife of a strange shape and with strange signs, taken from the cultists. Seems like it is used as a ritual knife, but apparently it's not limited to this use. It has technological changes in the design intended for the use of toxic substances - it's better not to touch the blade.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_ritual.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_ritual.mdl"

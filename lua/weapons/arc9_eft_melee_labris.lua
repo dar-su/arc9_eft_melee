@@ -6,12 +6,14 @@ SWEP.AdminOnly = true -- wawa   too op
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_labris") or "Chained Labrys"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_labris_desc") or "Chained Labrys"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_labris_desc") or [[A two-handed axe made out of a sewer hatch... With that weight, a single blow is enough to split a skull, whether the blade is sharp or not.
+
+Not usable in real EFT, but became usable by ChocoMilk in SPT mod with animations by Fnuxray!]]
 
 SWEP.Credits = { 
-    ["eft_trivia_author1"] = "Darsu", 
-    ["eft_trivia_assets2"] = "Battlestate Games LTD", 
-    ["eft_trivia_anim0"] = "Fnuxray", 
+    [(ARC9:GetPhrase("eft_trivia_author") or "Author") .. "1"] = "Darsu", 
+    [(ARC9:GetPhrase("eft_trivia_assets") or "Assets") .. "2"] = "Battlestate Games LTD", 
+    [(ARC9:GetPhrase("eft_trivia_anim") or "Custom Animations") .. "3"] = "Fnuxray",
 }
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_hultafors.mdl"

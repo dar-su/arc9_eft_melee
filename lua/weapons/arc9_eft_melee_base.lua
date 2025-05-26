@@ -6,8 +6,8 @@ SWEP.NotForNPCs = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_melee") or "Melee"
 SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author1") or "Author"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets2") or "Assets"] = "Battlestate Games LTD",
+    [(ARC9:GetPhrase("eft_trivia_author") or "Author") .. "1"] = "Darsu", 
+    [(ARC9:GetPhrase("eft_trivia_assets") or "Assets") .. "2"] = "Battlestate Games LTD", 
 }
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_6x5") or "6Kh5 Bayonet"

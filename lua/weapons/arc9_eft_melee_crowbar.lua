@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_freeman") or "Freeman crowbar"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_freeman_desc") or "Freeman crowbar"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_freeman_desc") or [[Designed as a tool for working with hard surfaces. Materials and construction are designed to provide optimal impact and strength. The head of the axe is made of 6AL4V titanium with a thickness of 2.85 inches.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_crowbar.mdl"

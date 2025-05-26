@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_rebel") or "Red Rebel ice pick"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_rebel_desc") or "Red Rebel ice pick"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_rebel_desc") or [[A perfectly balanced ice axe, the tip is made of a single piece of hardened metal.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_rebel_axe.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_rebel_axe.mdl"

@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_wycc") or "Antique axe"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_wycc_desc") or "Antique axe"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_wycc_desc") or [[An antique axe with a damaged handle that belonged to the ancient clan of hatchlings called WYCC.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_wycc_axe.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_wycc_axe.mdl"

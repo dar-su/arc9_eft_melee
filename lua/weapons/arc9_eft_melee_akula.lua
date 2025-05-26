@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_akula") or "Akula push dagger"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_akula_desc") or "Akula push dagger"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_akula_desc") or [[As dangerous as the fish its named after.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_dagger.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_dagger.mdl"

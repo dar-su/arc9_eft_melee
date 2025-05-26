@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_mpl50") or "MPL-50 entr. tool"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_mpl50_desc") or "MPL-50 entr. tool"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_mpl50_desc") or [[MPL-50 (Malaya Pekhotnaya Lopata 50 - "Small Infantry Spade 50") is a small spade invented by a Danish officer Mads Johan Buch Linnemann in 1869. While nominally an entrenching tool, MPL-50 saw a wide range of wartime applications ranging from a close quarters combat weapon to a cooking utensil.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_mpl40.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_mpl40.mdl"

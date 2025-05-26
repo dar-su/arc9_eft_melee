@@ -6,7 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_taiga") or "UVSR Taiga-1"
 SWEP.Class = ARC9:GetPhrase("eft_class_weapon_melee") or "Melee Weapon"
-SWEP.Description = ARC9:GetPhrase("eft_weapon_taiga_desc") or "UVSR Taiga-1"
+SWEP.Description = ARC9:GetPhrase("eft_weapon_taiga_desc") or [[UVSR "Device for carrying out rescue operations" Taiga-1. A truly versatile survival tool. It is a weapon and a shovel and an axe and everything you can imagine. It was developed and produced in the USSR for various agencies.]]
 
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_melee_taiga.mdl"
 SWEP.WorldModel = "models/weapons/arc9/darsu_eft/w_melee_taiga.mdl"
